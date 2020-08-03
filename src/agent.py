@@ -229,6 +229,9 @@ class PPO_Agent():
         self.env.close()
 
     def plot_results(self):
+        # Create plot directory
+        os.makedirs(self.plot_dir, exist_ok=True)
+
         results = pu.load_results(os.path.join(self.log_dir, self.env_name.split('-')[0], ''))
         pu.plot_results(results, average_group=True, split_fn=lambda _: '', shaded_std=False)
         plt.xlabel('Timestep')
