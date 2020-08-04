@@ -3,7 +3,7 @@ import argparse
 from src.agent import PPO_Agent
 
 if __name__ == '__main__':
-    formatter = lambda prog: argparse.RawTextHelpFormatter(prog, max_help_position=25)
+    formatter = lambda prog: argparse.RawTextHelpFormatter(prog, max_help_position=28)
     parser = argparse.ArgumentParser(description='MuJoCo PPO', formatter_class=formatter)
 
     parser._action_groups.pop()
@@ -12,9 +12,9 @@ if __name__ == '__main__':
     
     # General Arguments
     required.add_argument('--mode', 
-                          type=int, 
-                          choices={0, 1, 2}, 
-                          help='0: Train, 1: Test, 2: Plot last results', 
+                          type=str, 
+                          choices={"train", "test", "plot"}, 
+                          help='Train a model, test a model, or plot last results', 
                           required=True)
     required.add_argument('--env', 
                           type=str, 
@@ -142,9 +142,9 @@ if __name__ == '__main__':
     }
 
     agent = PPO_Agent(params, args.env, args.model_dir, args.log_dir, args.plot_dir, seed=args.seed)
-    if (args.mode == 0):
+    if (args.mode == "train"):
         agent.train()
-    elif (args.mode == 1):
+    elif (args.mode == "test"):
         agent.test()
     else:
         agent.plot_results()
