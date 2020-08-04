@@ -4,11 +4,12 @@ This is a simple implementation of the PPO Algorithm based on its accompanying [
 This repository was mainly made for learning purposes.
 
 # Requirements
+- Python 3 (Tested on 3.7)
 - [MuJoCo](http://www.mujoco.org)
 - [OpenAI Baselines](https://github.com/openai/baselines)
 - [OpenAI Gym](https://github.com/openai/gym)
-- Tensorflow 2 (Tested on v2.2.0)
-- Matplotlib (Tested on v3.2.2)
+- Tensorflow 2 (Tested on 2.2.0)
+- Numpy, Matplotlib
 
 # Usage
 To train/test/plot via the command line, there are only two required arguments:
