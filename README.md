@@ -5,8 +5,8 @@ This repository was mainly made for learning purposes.
 
 # Requirements
 - [MuJoCo](http://www.mujoco.org)
-- [Open AI Baselines](https://github.com/openai/baselines)
-- [Open AI Gym](https://github.com/openai/gym)
+- [OpenAI Baselines](https://github.com/openai/baselines)
+- [OpenAI Gym](https://github.com/openai/gym)
 - Tensorflow 2 (Tested on v2.2.0)
 - Matplotlib (Tested on v3.2.2)
 
